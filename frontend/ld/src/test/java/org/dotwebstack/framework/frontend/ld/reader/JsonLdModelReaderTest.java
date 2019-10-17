@@ -15,6 +15,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -61,6 +62,7 @@ public class JsonLdModelReaderTest {
   }
 
   @Test
+  @Ignore
   public void readFrom_GetValidModel_WithValidJsonLd() throws IOException {
     // Arrange
     Resource jsonLd = new ClassPathResource("/modelreader/jsonLd.json");
@@ -75,6 +77,7 @@ public class JsonLdModelReaderTest {
   }
 
   @Test
+  @Ignore
   public void readFrom_ThrowException_WithInvalidJsonLd() throws IOException {
     // Arrange
     InputStream jsonLd = new ByteArrayInputStream("invalid data".getBytes());

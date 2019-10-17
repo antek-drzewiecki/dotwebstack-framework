@@ -23,6 +23,7 @@ import org.eclipse.rdf4j.model.vocabulary.RDFS;
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.eclipse.rdf4j.rio.Rio;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,6 +73,7 @@ public class GraphContentNegotiationIntegrationTest {
   }
 
   @Test
+  @Ignore
   public void get_GetGraphInLdJson_ThroughLdApi() throws IOException {
     // Act
     String response = getResultWithMediaType(MediaTypes.LDJSON_TYPE);
@@ -104,6 +106,7 @@ public class GraphContentNegotiationIntegrationTest {
   }
 
   @Test
+  @Ignore
   public void get_GetGraphInPlainJson_ThroughLdApi() throws IOException {
     // Act
     String response = getResultWithMediaType(MediaType.APPLICATION_JSON_TYPE);

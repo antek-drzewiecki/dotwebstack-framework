@@ -71,13 +71,13 @@ public class SparqlBackendPersistenceStepFactoryTest {
                 targetGraph).build();
 
     // Act
-    PersistenceInsertIntoGraphStepExecutor persistenceInsertIntoGraphStepExecutor =
+    PersistenceInsertIntoStepExecutor persistenceInsertIntoGraphStepExecutor =
         sparqlBackendPersistenceStepFactory.create(persistenceStep, transactionModel,
             sparqlBackend);
 
     // Assert
     assertThat(persistenceInsertIntoGraphStepExecutor,
-        IsInstanceOf.instanceOf(PersistenceInsertIntoGraphStepExecutor.class));
+        IsInstanceOf.instanceOf(PersistenceInsertIntoStepExecutor.class));
   }
 
   @Test
